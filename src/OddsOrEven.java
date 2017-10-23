@@ -1,4 +1,5 @@
-import java.util.Scanner;
+//import java.util.Scanner;
+import java.util.*;
 public class OddsOrEven {
     public static void main(String[] args) {
         Greeting();
@@ -19,6 +20,30 @@ public class OddsOrEven {
         } else {
             System.out.println("User has picked evens. The computer will be odds.");
             computer = "O";
+        }
+        for (int i = 0; i < 40; i++) {
+            System.out.print("-");
+        }
+
+        System.out.print("How many fingers do you put? ");
+        Scanner fingersInp = new Scanner(System.in);
+        int userNumber = fingersInp.nextInt();
+
+        //computer gets a random number
+        Random rand = new Random();
+        int computerNumber = rand.nextInt(6);
+
+        System.out.println("The computer plays " + computerNumber + " fingers.");
+        for (int i = 0; i < 40; i++) {
+            System.out.print("-");
+        }
+        int sum = userNumber + computerNumber;
+        System.out.println("The total sum is " + sum);
+
+        if (sum % 2 == 0) {
+            System.out.println("The sum is even.");
+        } else {
+            System.out.println("The sum is odd.");
         }
         for (int i = 0; i < 40; i++) {
             System.out.print("-");
