@@ -24,6 +24,7 @@ public class OddsOrEven {
         for (int i = 0; i < 40; i++) {
             System.out.print("-");
         }
+        System.out.println();
 
         System.out.print("How many fingers do you put? ");
         Scanner fingersInp = new Scanner(System.in);
@@ -37,16 +38,30 @@ public class OddsOrEven {
         for (int i = 0; i < 40; i++) {
             System.out.print("-");
         }
+        System.out.println();
+
         int sum = userNumber + computerNumber;
         System.out.println("The total sum is " + sum);
 
         if (sum % 2 == 0) {
             System.out.println("The sum is even.");
+            if (user.equals("E")) {
+                System.out.println("User won.");
+            } else {
+                System.out.println("Computer won.");
+            }
         } else {
             System.out.println("The sum is odd.");
+            if (user.equals("O")) {
+                System.out.println("User won.");
+            } else {
+                System.out.println("Computer won.");
+            }
         }
         for (int i = 0; i < 40; i++) {
             System.out.print("-");
+
         }
+        System.out.println();
     }
 }
